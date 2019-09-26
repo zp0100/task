@@ -1,0 +1,177 @@
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+
+.header {
+    /*头部整体样式*/
+    position: fixed;
+    /*固定定位,头部脱离文档流,固定在顶部*/
+    width: 100%;
+    /*脱离文档流,没有默认宽度,要主动设置,不设高度,子元素自动撑开,高度就是所有子元素只和*/
+     z-index: 1;
+    /*层叠属性,为z轴设置为1,避免被主体覆盖*/
+    background-color: rgb(41, 189, 224);
+}
+
+.header_top {
+    /*头部顶部样式*/
+    display: flex;
+    justify-content: space-between;
+    /*两端对齐,间隔相等*/
+    align-items: center;
+    /*垂直居中*/
+    height: 74px;
+    /*设高撑开父元素*/
+    border-bottom: 1px solid rgb(116, 212, 235)
+}
+
+.header_top_ioc {
+    /*头顶左边角标样式*/
+    margin-left: 20px;
+}
+
+.header_top_txt {
+    /*头顶中间文本样式*/
+    font-size: 38px;
+    color: white;
+}
+
+.header_top_r {
+    /*头顶右边样式*/
+    display: flex;
+    align-items: center;
+    /*子元素垂直居中*/
+    width: 35px;
+    height: 35px;
+    border: 3px solid white;
+    border-radius: 50%;
+    margin-right: 20px;
+}
+
+.header_top_r_txt {
+    /*头顶右边文本样式*/
+    font-size: 28px;
+    color: white;
+    margin: auto;
+    /*文本水平居中*/
+}
+.main{/*主体整体样式*/
+    position: absolute;
+    margin-top:74px;
+    margin-bottom:128px;
+    width:100%;
+    background-color: rgb(41, 189, 224);
+}
+.main_top_ioc {/*主体顶部图标样式*/
+    display: block;
+    margin: 20px auto;
+}
+
+.main_top_txt {/*主体顶部文字样式8*/
+    text-align: center;
+    font-weight: 600;
+    font-size: 50px;
+    color: white;
+    margin-top: -97px;
+}
+.main_center{/*主体中间样式*/
+    overflow: hidden;
+    margin-bottom:40px;
+}
+
+.main_center_txt_1 {/*主体中间文本样式*/
+    margin: 40px 20%;
+    font-size: 40px;
+    font-weight: 600;
+    color: rgb(255, 200, 101);
+}
+
+.main_center_2 {
+    margin: 40px 20%;
+}
+
+.main_center_2_txt_1 {/*主体中间文字样式1-4*/
+    font-size: 30px;
+    color: white;
+    
+}
+.main_center_2_txt_2 {
+    float: left;
+    margin-right: 60px;
+    font-size: 30px;
+    color: white;
+}
+
+.main_center_2_txt_3 {
+    float: left;
+    margin-left: 60px;
+    font-size: 30px;
+    color: white;
+}
+
+.main_center_2_txt_4 {
+    clear:left;
+    float: left;
+    font-size: 30px;
+    color: white;
+}
+.main_bottom{/*主体底部整体样式*/
+    background-color: white;
+}
+.main_bottom_1{/*底部内盒子1样式*/
+    height: 166px;
+    border-bottom:2px solid rgb(221, 221, 221);
+ }
+.main_bottom_1_1{/*盒子1内的盒子1样式*/
+    display:flex;
+    justify-content:space-between;
+    align-items: center;
+    margin:0 20%;
+}
+.m_b_1_1_txt_1{/*小小盒子中的文本样式1*/
+    font-size:30px;
+}
+.m_b_1_1_txt_2{/*小小盒子中的文本样式2*/
+    font-size:20px;
+    color: rgb(213,213,213);
+}
+.main_bottom_1_2{
+    margin:0 20%;
+    padding-top:20px;
+    padding-bottom:20px;
+}
+.m_b_1_2_txt{
+    font-size:25px;
+    color:rgb(166,166,166);
+}
+.footer{
+    position: fixed;
+    bottom:0px;
+    width:100%;
+    height: 128px;
+    background-color: rgba(41, 189, 224,0.5);
+    display:flex;
+    justify-content: space-between;
+    align-items: center
+}
+.footer_l{
+    width: 272px;
+    height: 84px;
+    background-color: rgb(246,111,111);
+    margin-left:10%;
+    border-radius:20px;
+    font-size: 40px;
+    color:white;
+}
+
+.footer_r{
+    width: 272px;
+    height: 84px;
+    background-color: rgb(251,180,53);
+    margin-right:10%;
+    border-radius:20px;
+    font-size: 40px;
+    color:white;
+}
