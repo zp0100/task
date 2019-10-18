@@ -1,0 +1,218 @@
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+
+html {
+    font-size: 10px;
+}
+
+
+
+/*header样式*/
+.header {
+    padding: 1rem 0;
+}
+
+.header-logo-container {
+    width: 2.3rem;
+    height: 2.3rem;
+    line-height: 2rem;
+    text-align: center;
+    border: 0.1rem solid rgb(52, 180, 127);
+    border-radius: 50%;
+    margin-right: 1rem;
+}
+
+.header-p {
+    font-size: 1.3rem;
+    color: rgb(52, 180, 127);
+
+}
+
+/*nav样式*/
+.nav-container {
+    background-color: rgb(41, 176, 120);
+    color: white;
+}
+
+.nav-a {
+    font-size: 1.7rem;
+    padding: 20px 0 20px 10px;
+
+}
+
+.nav-item:hover .nav-li {
+    visibility: visible;
+}
+
+.nav-li {
+    visibility: hidden;
+    border-bottom: 0.4rem solid white;
+
+}
+
+/*main*/
+.main-container {
+    background-color: rgb(250, 250, 250);
+    padding-bottom: 10rem;
+}
+
+.main-h {
+    padding: 1.5rem 0;
+    border-bottom: 1px solid rgb(208, 214, 217);
+}
+
+/*main-nav*/
+.main-nav-a {
+    color: black
+}
+
+/*main-content*/
+.main-box {
+    position: relative;
+    border: 1px solid rgb(237, 241, 242);
+    background-color: white;
+    border-radius: 0.5rem;
+    margin-top: 4rem;
+}
+
+/*鼠标悬停*/
+.main-box:hover .main-box-111 {
+    visibility: visible;
+}
+
+.main-box:hover .main-box-222 {
+    visibility: visible;
+}
+
+.main-box:hover .main-box-333 {
+    visibility: visible;
+}
+
+/*main-box-111*/
+.main-box-111 {
+    position: absolute;
+    visibility: hidden;
+    width: 100%;
+    height: 100%;
+    color: white;
+    font-size: 1.2rem;
+    border-radius: 0.5rem;
+    background-color: rgba(11, 5, 46, 0.5);
+    transition-property: transform;
+    transition-duration: 2s;
+}
+
+.main-box-111-h {
+    text-align: center;
+}
+
+.main-box-111:hover {
+    transform: rotateX(360deg);
+}
+
+/*main-box-222*/
+.main-box-222 {
+    position: absolute;
+    visibility: hidden;
+    width: 100%;
+    height: 100%;
+    color: white;
+    font-size: 1.2rem;
+    border-radius: 0.5rem;
+    background-color: rgba(11, 5, 46, 0.5);
+    transition-property: transform;
+    transition-duration: 2s;
+}
+
+.main-box-222:hover {
+    transform: rotateZ(360deg);
+}
+
+/*main-box-333*/
+.main-box-333 {
+    position: absolute;
+    visibility: hidden;
+    width: 100%;
+    height: 100%;
+    color: white;
+    font-size: 1.2rem;
+    border-radius: 0.5rem;
+    background-color: rgba(11, 5, 46, 0.5);
+    transition-property: transform;
+    transition-duration: 2s;
+}
+
+.main-box-333:hover {
+    transform: rotateY(360deg);
+}
+
+/*box-2*/
+.main-box-2-box {
+    width: 50%;
+}
+
+.main-box-2-box-container {
+    border-top: 1px solid rgb(237, 241, 242);
+    border-right: 1px solid rgb(237, 241, 242);
+}
+
+.main-box-2-span {
+    color: red;
+}
+
+/*box-3*/
+
+.main-box-3-L {
+    width: 30%;
+    border-top: 1px solid rgb(237, 241, 242);
+    border-right: 1px solid rgb(237, 241, 242);
+    color: rgb(153, 153, 153);
+    justify-content: center;
+    align-items: center;
+}
+
+.main-box-3-R {
+    width: 70%;
+}
+
+.main-box-3-R-box {
+    padding: 1rem;
+    border-top: 1px solid rgb(237, 241, 242);
+    justify-content: space-around;
+}
+
+/*box-4*/
+.main-box-4-p1 {
+    border-top: 1px solid rgb(237, 241, 242);
+}
+
+.main-box-4-p2 {
+    border-top: 1px solid rgb(237, 241, 242);
+    color: rgb(153, 153, 153);
+}
+
+/*footer-2*/
+.footer-2 {
+    background-color: rgb(38, 162, 111);
+    color: white;
+    font-size: 1rem;
+    padding: 2rem 0;
+}
+
+.footer-2-img {
+    width: 6rem;
+}
+
+.footer-2-p-1 {
+    margin-left: 1rem;
+}
+
+.footer-3 {
+    color: white;
+    background-color: rgb(38, 162, 111);
+    text-align: center;
+    border-top: 1px solid rgb(50, 192, 134)
+}

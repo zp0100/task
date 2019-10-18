@@ -1,0 +1,238 @@
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+
+html {
+    font-size: 10px;
+}
+
+p {
+    margin: 0;
+}
+
+/*header样式*/
+.header {
+    padding: 1rem 0;
+}
+
+.header-logo-container {
+    width: 2.3rem;
+    height: 2.3rem;
+    line-height: 2rem;
+    text-align: center;
+    border: 0.1rem solid rgb(52, 180, 127);
+    border-radius: 50%;
+    margin-right: 1rem;
+}
+
+.header-p {
+    font-size: 1.3rem;
+    color: rgb(52, 180, 127);
+
+}
+
+/*nav样式*/
+.nav-container {
+    background-color: rgb(41, 176, 120);
+    color: white;
+}
+
+.nav-a {
+    font-size: 1.7rem;
+    padding: 20px 0 20px 10px;
+
+}
+
+.nav-item:hover .nav-li {
+    visibility: visible;
+}
+
+.nav-li {
+    visibility: hidden;
+    border-bottom: 1px solid white;
+
+}
+
+/*carousel样式*/
+.carousel-img {
+    width: 100%;
+    height: 40vh;
+}
+
+.carousel-p-1 {
+    font-size: 2rem;
+}
+
+.carousel-p-2 {
+    font-size: 4rem;
+}
+
+.main-container {
+    background-color: rgb(250, 250, 250)
+}
+
+/*main-1样式*/
+.main-1-box {
+    /*main-1每个子元素的容器样式*/
+    padding-top: 3rem;
+    text-align: center;
+}
+
+.main-1-box-2 {
+    padding: 3rem 0 0 6rem;
+}
+
+.main-ioc-1 {
+    /*设置固定高度，水平居中*/
+    display: block;
+    margin: 0 auto;
+    height: 3rem;
+}
+
+.main-1-caption {
+    /*小标题水平居中，拉开底部和顶部边距*/
+    text-align: center;
+    margin: 3rem 0;
+}
+
+.main-h-box {
+    /*最右边图标和数字，距离顶部之前图标的高度*/
+    margin-top: 3rem;
+}
+
+.main-h-p {
+    /*最右边数字样式*/
+    margin-top: 0.5rem;
+    font-size: 1.2rem;
+    color: rgb(161, 161, 161);
+}
+
+.main-p {
+    /*最右边文本样式*/
+    color: rgb(161, 161, 161);
+    font-size: 1rem;
+}
+
+/*headline*/
+.headline {
+    padding: 10rem 0 5rem 0;
+    text-align: center;
+}
+
+/*main-2*/
+.digit {
+    width: 3rem;
+    height: 3rem;
+    line-height: 3rem;
+    text-align: center;
+    box-shadow: rgb(230 230 230) 0rem 0.2rem 0.4rem 0.1rem;
+    border-radius: 50%;
+    margin-right: 1rem;
+    flex-shrink: 0;
+}
+
+.main-h {
+    margin-bottom: -.5rem;
+}
+
+.main-caption-container {
+    margin-bottom: 10rem;
+
+}
+
+/*main-3*/
+.main-3-content {
+    box-shadow: rgb(230 230 230) 0rem 0.2rem 0.4rem 0.1rem;
+    /*阴影*/
+    padding: 0 1.2rem;
+    /*文本水平居中*/
+}
+
+.main-3-ioc {
+    /*图标为圆形*/
+    width: 5rem;
+    height: 5rem;
+    border-radius: 50%;
+}
+
+.main-3-ioc-container {
+    /*包裹图标*/
+    padding: 2rem 0;
+    /*垂直居中*/
+    text-align: center;
+    /*水平居中*/
+}
+
+.main-3-h {
+    text-align: center;
+    margin: 0 0 1rem 0;
+}
+
+.main-3-p {
+    color: rgb(153, 153, 153);
+    font-size: 1rem;
+    padding-bottom: 2rem;
+}
+
+/*main-4*/
+.main-4-img {
+    background: url("image.png") no-repeat;
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+    background-size: cover;
+
+}
+
+.main-4-box:hover {
+    box-shadow: rgb(230 230 230) 0rem 0rem 2rem;
+    z-index: 1;
+
+}
+
+/*footer*/
+/*footrt-1*/
+.footer-h {
+    padding: 1rem 0;
+    text-align: center;
+}
+
+.footer-1-p {
+    color: rgb(153, 153, 153);
+    font-size: 1.2rem;
+    text-align: center;
+}
+
+.footer-1-p:hover .footer-1-box {
+    visibility: visible;
+}
+
+.footer-1-box {
+    visibility: hidden;
+    border-bottom: 1px solid rgb(38, 162, 111);
+}
+
+/*footer-2*/
+.footer-2 {
+    background-color: rgb(38, 162, 111);
+    color: white;
+    font-size: 1rem;
+    padding: 2rem 0;
+}
+
+.footer-2-img {
+    width: 6rem;
+}
+
+.footer-2-p-1 {
+    margin-left: 1rem;
+}
+
+.footer-3 {
+    color: white;
+    background-color: rgb(38, 162, 111);
+    text-align: center;
+    border-top: 1px solid rgb(50, 192, 134)
+}
