@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>task10</title>
+    <link rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/4.3.1/css/bootstrap.min.css">
+    <script src="https://cdn.staticfile.org/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://cdn.staticfile.org/popper.js/1.15.0/umd/popper.min.js"></script>
+    <script src="https://cdn.staticfile.org/twitter-bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="task10.css">
+</head>
+
+<body>
+    <header>
+        <div class="container">
+            <div class="row">
+                <div class="col-12 d-flex justify-content-between p-2">
+                    <p style="color: white">服务热线:010-594-78634</p>
+                    <div class="d-flex">
+                        <button class="header-botton">登录</botton>
+                            <button class="header-botton">注册</botton>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+      <!--导航栏-->
+      <div style="background: rgb(243,243,243);">
+      <div class="container">
+      <nav class="navbar navbar-expand-md">
+            <a class="navbar-brand" href="#"></a>
+            <button class="navbar-toggler nav-border" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+              
+              <span class="navbar-toggler-icon">
+                  <div class="nav-box-shadow"></div>
+                  <div class="nav-box-shadow"></div>
+                  <div class="nav-box-shadow"></div>
+              </span>
+            </button>
+            <div class="collapse navbar-collapse  justify-content-end" id="collapsibleNavbar">
+              <ul class="navbar-nav nav-center">
+                <li class="nav-item">
+                  <a class="nav-link " href="#">首页</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link " href="#">在线定制</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">标准箱</a>
+                </li> 
+                <li class="nav-item">
+                    <a class="nav-link" href="#">品质保证</a>
+                </li>    
+              </ul>
+            </div>  
+          </nav>
+          </div>
+          </div>
+    <!--主体-->
+    <div class="container">
+<!--进度条-->
+         <div class="row m-0">
+            <div class="col-md-2 offset-md-4 p-0 progress-hover">
+                <div class="progress-box">
+                    <div class="progress-content">1</div>
+                </div>
+                <p class="progress-p">1.定制纸箱</p>
+            </div>
+            <div class="col-md-2 p-0 progress-hover">
+                <div class="progress-box">
+                    <div class="progress-content">2</div>
+                </div>
+                <p class="progress-p">2.选择数量</p>
+            </div>
+            <div class="col-md-2 p-0 progress-hover">
+                <div class="progress-box">
+                    <div class="progress-content">3</div>
+                </div>
+                <p class="progress-p">3.上传附件</p>
+            </div>
+            <div class="col-md-2 p-0 progress-hover">
+                <div class="progress-box">
+                    <div class="progress-content">4</div>
+                </div>
+                <p class="progress-p">4.确认下单</p>
+            </div>
+        </div>
+        <!--主体-->
+        <main>
+            <div class="d-flex p-2">
+                <div style="width:.5rem;background: rgb(29,122,217);"></div>
+                <p style="font-size: 2rem">请按照以下步骤定制你想要的纸箱</p>
+            </div>
+            <div>
+                <div class="d-flex p-4 main-border">
+                    <img class="mr-3" src="2.png" />
+                    <p>选择箱型</p>
+                </div>
+                <div class="d-flex justify-content-between main-text p-2 align-items-baseline">
+                    <form class="col-9 p-3">
+                        <div class="row">
+                            <div class="col-sm-4">
+                                <input class=" text " type="radio" name="sex" value="#">对口箱
+                            </div>
+                            <div class="col-sm-4">
+                                <input type="radio" name="sex" value="#">天地盒
+                            </div>
+                            <div class="col-sm-4">
+                                <input type="radio" name="sex" value="#">飞机盒
+                            </div>
+                        </div>
+                    </form>
+                    <form action="">
+                        <select class="main-select" name="#">
+                            <option value="查看详情">查看详情</option>
+                            <option value="天地盒">对口箱</option>
+                            <option value="天地盒">天地盒</option>
+                            <option value="飞机盖">飞机盖</option>
+                        </select>
+                    </form>
+                </div>
+            </div>
+            <div>
+                <div class="d-flex p-4 main-border">
+                    <img class="mr-3" src="3.png" />
+                    <p>确定尺寸</p>
+                </div>
+                <div class="d-flex justify-content-between main-text p-2 align-items-baseline">
+                    <form class="col-9">
+                        <div class="row p-3">
+                            <div class="col-md-3">
+                                <input type="radio" name="sex" value="#">外径
+                            </div>
+                            <div class="col-md-3 d-flex p-1">
+                                长:<input class="input-box" type="text" name="长">mm
+                            </div>
+                            <div class="col-md-3 d-flex p-1">
+                                宽:<input class="input-box" type="text" name="长">mm
+                            </div>
+                            <div class="col-md-3 d-flex p-1">
+                                高:<input class="input-box" type="text" name="长">mm
+                            </div>
+                        </div>
+                        <div class="row p-3">
+                            <div class="col-md-3">
+                                <input type="radio" name="sex" value="#">内径
+                            </div>
+                            <div class="col-md-3 d-flex p-1">
+                                长:<input class="input-box" type="text" name="长">mm
+                            </div>
+                            <div class="col-md-3 d-flex p-1">
+                                宽:<input class="input-box" type="text" name="长">mm
+                            </div>
+                            <div class="col-md-3 d-flex p-1">
+                                高:<input class="input-box" type="text" name="长">mm
+                            </div>
+                        </div>
+                    </form>
+                    <form action="">
+                        <select class="main-select" name="#">
+                            <option value="查看详情">查看详情</option>
+                            <option value="天地盒">外径</option>
+                            <option value="天地盒">内径</option>
+                        </select>
+                    </form>
+                </div>
+            </div>
+            <div>
+                <div class="d-flex p-4 main-border main-text">
+                    <img class="mr-3" src="4.png" />
+                    <p>选择材质</p>
+                </div>
+                <div class="d-flex justify-content-between main-text align-items-baseline">
+
+                    <form class="col-9 p-5">
+                        <div class="row">
+                            <div class="col-md-4 col-lg p-2">
+                                <input type="radio" name="#" value="#">三层A瓦优质
+                            </div>
+                            <div class="col-md-4 col-lg p-2">
+                                <input type="radio" name="#" value="#">三层A瓦优质
+                            </div>
+                            <div class="col-md-4 col-lg p-2">
+                                <input type="radio" name="#" value="#">三层A瓦优质
+                            </div>
+                            <div class="col-md-4 col-lg p-2">
+                                <input type="radio" name="#" value="#">三层A瓦优质
+                            </div>
+                            <div class="col-md-4 col-lg p-2">
+                                <input type="radio" name="#" value="#">三层A瓦优质
+                            </div>
+                        </div>
+                    </form>
+
+                    <form action="">
+                        <select class="main-select" name="#">
+                            <option value="查看详情">查看详情</option>
+                            <option value="#">三层A瓦优质</option>
+                            <option value="#">三层A瓦优质</option>
+                            <option value="#">三层A瓦优质</option>
+                            <option value="#">三层A瓦优质</option>
+                            <option value="#">三层A瓦优质</option>
+                        </select>
+                    </form>
+
+                </div>
+            </div>
+            <div class="d-flex justify-content-center align-items-center main-p-box" style="height: 20rem">
+                <p class="main-p-1">下一步</p>
+            </div>
+        </main>
+        </main>
+    </div>
+    <!--尾部-->
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4 p-2">
+                    <p>51包装网-纸箱首选包装平台</p>
+                </div>
+                <div class="col-md-4">
+                    <div class="d-flex p-2">
+                        <p class="mr-3 footer-p">关于我们</p>
+                        <p class="mr-3 footer-p">配送流程</p>
+                        <p class="mr-3 footer-p">联系我们</p>
+                    </div>
+                    <div class="d-flex p-2">
+                        <p class="mr-3 footer-p">下单指南</p>
+                        <p class="mr-3 footer-p">媒体介绍</p>
+                    </div>
+                </div>
+                <div class="col-md-4 d-flex p-2 footer-ioc">
+                    <div class="d-flex flex-column justify-content-between">
+                        <p>TEL:400-0000-000</p>
+                        <p>企业QQ:123456789</p>
+                        <p>微信号:xxxxxx</p>
+                    </div>
+                    <img src="1.png" />
+                </div>
+            </div>
+        </div>
+        <p class="footer-2">北京五一包装科技有限公司Copyright ©2015 51baozhuang.com015
+            All rights reserved. 京icp备99999999-1</p>
+    </footer>
+</body>
+
+</html>>

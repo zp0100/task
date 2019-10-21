@@ -1,0 +1,167 @@
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+html {
+    font-size: 10px;
+}
+header{
+    background: rgb(29,122,217);
+}
+p{
+    margin:0;
+    font-size:1.5rem;
+    color:rgb(102,102,102);
+}
+.header-botton{
+    font-size:1.5rem;
+    color:white;
+    width: 5rem;
+    padding:0 1rem;
+    background: rgb(29,122,217);
+    margin-right:1rem;
+}
+.header-botton:hover.header-botton{
+color:black;
+background: white;
+width:7rem;
+}
+
+/*进度条*/
+.progress-box{
+    position: relative;
+    height: .4rem;
+    background: rgb(204,204,204);
+    margin-top:5rem;
+}
+.progress-p{
+    color:rgb(204,204,204);
+    text-align: center;
+    margin-top:2rem;
+    margin-bottom:5rem;
+}
+.progress-hover:hover .progress-p
+{
+color: rgb(255,127,2)
+}
+.progress-hover:hover .progress-box
+{
+background: rgb(255,127,2)
+}
+.progress-hover:hover .progress-content
+{
+background: rgb(255,127,2)
+}
+.progress-content{
+    position: absolute;
+    width: 2rem;
+    height: 2rem;
+    /*行内元素的水平和垂直居中*/
+    text-align: center;
+    line-height:2rem;
+    border-radius: 50%;
+    background: rgb(204,204,204);
+    color: white;
+    /*悬浮在父元素的中间*/
+    top:-8px;
+    /*绝对定位水平居中*/
+    left: 0;
+    right: 0;
+    margin-left: auto;
+    margin-right: auto;
+}
+/*导航*/
+.navbar-nav{
+    padding:3rem 0;
+   
+}
+/*导航栏字体样式*/
+.nav-link{
+    box-shadow:rgb(102,102,102) 3px 3px 3px;
+    width:8rem;
+    padding:5px 0;
+    border-radius: 3px;
+    color:black;
+    background: white;
+    margin:1rem 0 0 1rem;
+    text-align: center;
+    font-size: 1.5rem;
+}
+/*导航栏鼠标悬停样式*/
+.nav-link:hover{
+    background-color: black;
+    color: white;
+}
+/*导航栏折叠按钮样式*/
+/*外部*/
+.nav-border{
+    border:1px solid black;
+}
+/*内部*/
+.nav-box-shadow{
+    padding:.2rem;
+    border-bottom: 1px solid black;
+}
+
+@media screen and (max-width: 768px) {
+   .nav-center{
+    align-items:center;
+  }
+}
+/*主体*/
+.main-text{
+    font-size: 1.5rem;
+    border-left:1px solid rgb(231,231,231);
+    border-right:1px solid rgb(231,231,231);
+    background: rgb(251,252,255);
+}
+.footer-2{
+    background: rgb(29,122,217);
+    text-align:center;}
+.main-border{
+    border:1px solid rgb(231,231,231);
+    background: rgb(243,243,243);
+}
+.main-p-1{
+    font-size: 3rem;
+    background:red;
+    padding:.5rem 2rem;
+}
+.main-p-box{
+    border-left:1px solid rgb(231,231,231);
+    border-right:1px solid rgb(231,231,231);
+    border-bottom:1px solid rgb(231,231,231);
+}
+footer{
+    background:rgb(249,249,249)
+}
+
+.input-box {
+    border:1px solid rgb(231,231,231);
+    width:5rem;
+}
+.main-select {
+   border:1px solid rgb(231,231,231);
+   color:rgb(102,102,102);
+   margin-right: 1rem;
+   width:8rem;
+   appearance:none;
+ -moz-appearance:none;
+ -webkit-appearance:none;
+ background: url("5.png") no-repeat 
+ scroll right center transparent
+}
+/*底部布局*/
+p:hover.footer-p{
+    color:rgb(29,122,217);
+}
+.footer-ioc{
+    justify-content: flex-end;
+}
+@media screen and (max-width: 768px) {
+    .footer-ioc{
+        justify-content: flex-start;
+       
+    }
+}
