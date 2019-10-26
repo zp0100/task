@@ -1,0 +1,153 @@
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+/*头部*/
+.header {
+  position: fixed;
+  width: 100%;
+  background-color: #5fc0cd;
+  height: 54px;
+  top: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.header .header-p {
+  font-weight: bold;
+  font-size: 20px;
+  color: white;
+}
+.header .header-span {
+  position: absolute;
+  left: 20px;
+  font-weight: normal;
+  font-size: 42px;
+  color: white;
+}
+/*主体*/
+.main {
+  margin: 54px 0;
+}
+/*横幅广告*/
+.banner {
+  display: flex;
+  align-items: center;
+  background: url("4.png");
+  height: 240px;
+  background-size: 100% 100%;
+}
+.banner .ioc_2 {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  margin-left: 30px;
+  background-color: #efefef;
+}
+.banner .banner-text-box {
+  margin-left: 30px;
+}
+.banner .banner-text-box .banner-p-1 {
+  font-weight: normal;
+  font-size: 20px;
+  color: white;
+}
+.banner .banner-text-box .banner-p-box {
+  display: flex;
+}
+.banner .banner-text-box .banner-p-box .ioc_4 {
+  width: 20px;
+  height: 28px;
+}
+.banner .banner-text-box .banner-p-box .banner-p-2 {
+  margin-left: 20px;
+  font-weight: normal;
+  font-size: 20px;
+  color: white;
+}
+/*主体内容*/
+.main-box {
+  display: flex;
+  align-items: center;
+  min-height: 50px;
+  border-style: none none solid none;
+  border-width: 1px;
+  border-color: #eff0f4;
+}
+.main-box .main-container-1-div {
+  background-color: #5fc0cd;
+  width: 4px;
+  height: 14px;
+  margin: 0 10px;
+}
+.main-box .main-introduction {
+  font-weight: bold;
+  font-size: 20px;
+  color: block;
+}
+.main-box .main-experience {
+  font-weight: bold;
+  font-size: 15px;
+  color: block;
+}
+.main-box .main-importance {
+  font-weight: bold;
+  font-size: 20px;
+  color: red;
+}
+.main-box .ioc_3 {
+  width: 15px;
+  height: 15px;
+  margin: 0 20px;
+}
+.main-box .main-p-2 {
+  font-weight: bold;
+  font-size: 20px;
+  color: #999999;
+  padding: 0 20px;
+  margin-right: 20px;
+  border-right: 3px solid #999999;
+  flex-shrink: 0;
+}
+/*底部*/
+.footer {
+  position: fixed;
+  width: 100%;
+  background-color: white;
+  height: 54px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  bottom: 0;
+}
+.footer .botton-l {
+  width: 45%;
+  background: white;
+  border: 1px solid;
+  border-color: #5fc0cd;
+  border-radius: 6px;
+  padding: 10px;
+  cursor: pointer;
+  font-weight: normal;
+  font-size: 20px;
+  color: #5fc0cd;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.footer .botton-r {
+  width: 45%;
+  background: #5fc0cd;
+  border: 1px solid;
+  border-color: white;
+  border-radius: 6px;
+  padding: 10px;
+  cursor: pointer;
+  font-weight: normal;
+  font-size: 20px;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
