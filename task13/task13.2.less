@@ -1,0 +1,245 @@
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+
+//常用背景色
+@bg-1: rgb(41, 189, 224);
+@bg-2: rgb(253, 215, 147);
+@bg-3: rgb(131, 176, 154);
+@p-1: rgb(154, 154, 154);
+@p-2: rgb(251, 180, 53);
+@p-3: rgb(201, 201, 201);
+
+//文本样式
+.text-style(@w: normal, @s: 40px, @c: white) {
+    font-weight: @w;
+    font-size: @s;
+    color: @c;
+}
+
+//弹性布局-居中
+.flex(@j: center) {
+    display: flex;
+    align-items: center;
+    justify-content: @j;
+}
+
+//固定定位
+.fixed {
+    position: fixed;
+    width: 100%;
+    z-index: 2;
+}
+
+/*头部*/
+.header {
+    .fixed;
+    top: 0;
+
+
+    .header-top {
+        /*头部顶段样式*/
+        .flex(space-between, );
+        height: 80px;
+        background: @bg-1;
+
+        .header-top-L {
+            margin-left: 20px;
+            border: 2px solid white;
+
+            .header-top-L-box {
+                background: white;
+                width: 26px;
+                height: 2px;
+                margin: 7px 3px;
+            }
+        }
+
+        .header-top-C {
+            .text-style;
+        }
+
+        .header-top-R {
+            width: 40px;
+            height: 40px;
+            position: relative;
+            margin-right: 20px;
+        }
+
+        .header-top-R::before,
+        .header-top-R::after {
+            content: "";
+            position: absolute;
+            /*方便进行定位*/
+            height: 40px;
+            width: 1.5px;
+            top: 2px;
+            right: 9px;
+            /*设置top和right使图像在20*20框中居中*/
+            background: white;
+        }
+
+        .header-top-R::before {
+            transform: rotate(45deg);
+            /*进行旋转*/
+        }
+
+        .header-top-R::after {
+            transform: rotate(-45deg);
+        }
+    }
+
+
+    .header-conter {
+        /*头部中间样式*/
+        .flex(space-between);
+        height: 82px;
+        background-color: rgb(185, 233, 245);
+
+        .header-conter-p {
+            .text-style(@s: 30px, @c: black, );
+            margin-left: 50px;
+        }
+
+        .header-conter-mp3 {
+            position: relative;
+            width: 52px;
+            height: 52px;
+            border-radius: 50%;
+            background-color: @p-2;
+            margin-right: 18px;
+
+            .header-conter-triangle {
+                display: block;
+                width: 0px;
+                height: 0px;
+                border-left: 27.712px solid white;
+                border-top: 16px solid transparent;
+                border-right: 27.712px solid transparent;
+                border-bottom: 16px solid transparent;
+                margin-top: 10px;
+                margin-left: 16px;
+            }
+
+            .mp3 {
+                opacity: 0;
+                position: absolute;
+                top: 0;
+                left: 0;
+            }
+        }
+    }
+
+
+    .header-bottom {
+        /*头部底端样式*/
+        position: relative;
+        background-color: @bg-1;
+
+        .header-b-triangle {
+            position: absolute;
+            left: 76px;
+            width: 0px;
+            height: 0px;
+            border-left: 7px solid transparent;
+            border-right: 7px solid transparent;
+            border-top: 12.124px solid rgb(185, 233, 245);
+            border-bottom: 12.124px solid transparent;
+        }
+
+        .header-b-p {
+            .text-style(@s: 26px, );
+            padding: 22px 70px;
+        }
+    }
+}
+
+/*主体*/
+.main {
+    background: @bg-1;
+    margin: 241px 0 188px 0;
+
+    .main-tier {
+        display: flex;
+        justify-content: space-between;
+        width: 80%;
+        margin: 0 auto;
+
+        .main-box {
+            position: relative;
+            width: 25%;
+            height: 0;
+            padding-top: 35%;
+
+            .main-box-top {
+                .flex;
+                .text-style(@s: 30px, @c: black, );
+                position: absolute;
+                top: 0;
+                width: 100%;
+                height: 50%;
+                background: @bg-2;
+                border-top: 4px solid white;
+                border-left: 4px solid white;
+                border-right: 4px solid white;
+                box-sizing: border-box;
+            }
+
+            .main-box-bottom {
+                .flex;
+                .text-style(@s: 26px, );
+                position: absolute;
+                top: 50%;
+                width: 100%;
+                height: 20%;
+                background: @bg-3;
+                border-bottom: 4px solid white;
+                border-left: 4px solid white;
+                border-right: 4px solid white;
+                box-sizing: border-box;
+            }
+
+            .main-menu {
+                background-image: url("2.png");
+                background-color: rgb(41, 189, 224);
+                display: none;
+                position: absolute;
+                margin-top: 20px;
+                width: 100%;
+                height: 100%;
+                background-repeat: no-repeat;
+                background-size: 100%;
+                top: 65%;
+            }
+
+
+        }
+
+        .main-box:hover .main-menu {
+            display: block;
+        }
+    }
+
+}
+
+/*尾部*/
+.footer {
+    .fixed;
+    .flex;
+    bottom: 0;
+    background: @bg-1;
+    width: 100%;
+    height: 188px;
+    text-decoration: none;
+
+    .footer-a {
+        .flex;
+        .text-style;
+        width: 490px;
+        height: 90px;
+        background: @p-2;
+        text-decoration: none;
+    }
+}

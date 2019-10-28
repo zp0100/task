@@ -1,0 +1,216 @@
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+.fixed {
+  position: fixed;
+  width: 100%;
+  z-index: 2;
+}
+/*头部*/
+.header {
+  position: fixed;
+  width: 100%;
+  z-index: 2;
+  top: 0;
+}
+.header .header-top {
+  /*头部顶段样式*/
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 80px;
+  background: #29bde0;
+}
+.header .header-top .header-top-L {
+  margin-left: 20px;
+  border: 2px solid white;
+}
+.header .header-top .header-top-L .header-top-L-box {
+  background: white;
+  width: 26px;
+  height: 2px;
+  margin: 7px 3px;
+}
+.header .header-top .header-top-C {
+  font-weight: normal;
+  font-size: 40px;
+  color: white;
+}
+.header .header-top .header-top-R {
+  width: 40px;
+  height: 40px;
+  position: relative;
+  margin-right: 20px;
+}
+.header .header-top .header-top-R::before,
+.header .header-top .header-top-R::after {
+  content: "";
+  position: absolute;
+  /*方便进行定位*/
+  height: 40px;
+  width: 1.5px;
+  top: 2px;
+  right: 9px;
+  /*设置top和right使图像在20*20框中居中*/
+  background: white;
+}
+.header .header-top .header-top-R::before {
+  transform: rotate(45deg);
+  /*进行旋转*/
+}
+.header .header-top .header-top-R::after {
+  transform: rotate(-45deg);
+}
+.header .header-conter {
+  /*头部中间样式*/
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 82px;
+  background-color: #b9e9f5;
+}
+.header .header-conter .header-conter-p {
+  font-weight: normal;
+  font-size: 30px;
+  color: black;
+  margin-left: 50px;
+}
+.header .header-conter .header-conter-mp3 {
+  position: relative;
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  background-color: #fbb435;
+  margin-right: 18px;
+}
+.header .header-conter .header-conter-mp3 .header-conter-triangle {
+  display: block;
+  width: 0px;
+  height: 0px;
+  border-left: 27.712px solid white;
+  border-top: 16px solid transparent;
+  border-right: 27.712px solid transparent;
+  border-bottom: 16px solid transparent;
+  margin-top: 10px;
+  margin-left: 16px;
+}
+.header .header-conter .header-conter-mp3 .mp3 {
+  opacity: 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.header .header-bottom {
+  /*头部底端样式*/
+  position: relative;
+  background-color: #29bde0;
+}
+.header .header-bottom .header-b-triangle {
+  position: absolute;
+  left: 76px;
+  width: 0px;
+  height: 0px;
+  border-left: 7px solid transparent;
+  border-right: 7px solid transparent;
+  border-top: 12.124px solid #b9e9f5;
+  border-bottom: 12.124px solid transparent;
+}
+.header .header-bottom .header-b-p {
+  font-weight: normal;
+  font-size: 26px;
+  color: white;
+  padding: 22px 70px;
+}
+/*主体*/
+.main {
+  background: #29bde0;
+  margin: 241px 0 188px 0;
+}
+.main .main-tier {
+  display: flex;
+  justify-content: space-between;
+  width: 80%;
+  margin: 0 auto;
+}
+.main .main-tier .main-box {
+  position: relative;
+  width: 25%;
+  height: 0;
+  padding-top: 35%;
+}
+.main .main-tier .main-box .main-box-top {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: normal;
+  font-size: 30px;
+  color: black;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 50%;
+  background: #fdd793;
+  border-top: 4px solid white;
+  border-left: 4px solid white;
+  border-right: 4px solid white;
+  box-sizing: border-box;
+}
+.main .main-tier .main-box .main-box-bottom {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: normal;
+  font-size: 26px;
+  color: white;
+  position: absolute;
+  top: 50%;
+  width: 100%;
+  height: 20%;
+  background: #83b09a;
+  border-bottom: 4px solid white;
+  border-left: 4px solid white;
+  border-right: 4px solid white;
+  box-sizing: border-box;
+}
+.main .main-tier .main-box .main-menu {
+  background-image: url("2.png");
+  background-color: #29bde0;
+  display: none;
+  position: absolute;
+  margin-top: 20px;
+  width: 100%;
+  height: 100%;
+  background-repeat: no-repeat;
+  background-size: 100%;
+  top: 65%;
+}
+.main .main-tier .main-box:hover .main-menu {
+  display: block;
+}
+/*尾部*/
+.footer {
+  position: fixed;
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  bottom: 0;
+  background: #29bde0;
+  width: 100%;
+  height: 188px;
+  text-decoration: none;
+}
+.footer .footer-a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: normal;
+  font-size: 40px;
+  color: white;
+  width: 490px;
+  height: 90px;
+  background: #fbb435;
+  text-decoration: none;
+}

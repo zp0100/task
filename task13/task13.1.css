@@ -1,0 +1,125 @@
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+/*头部*/
+.header {
+  height: 80px;
+  background: #29bde0;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+.header .header-botton {
+  margin-left: 40px;
+}
+.header .header-botton .header-span {
+  display: block;
+  background: white;
+  width: 40px;
+  height: 4px;
+  margin: 10px 0;
+}
+/*导航*/
+.nav {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 80%;
+  height: 100px;
+  border: 1px solid #c9c9c9;
+  margin: 20px auto;
+  position: relative;
+}
+.nav .nav-p {
+  font-weight: normal;
+  font-size: 40px;
+  color: #9a9a9a;
+}
+.nav .nav_ioc {
+  position: absolute;
+  width: 26px;
+  height: 48px;
+  right: 30px;
+}
+/*主体*/
+.main {
+  width: 80%;
+  margin: 0 auto 20px;
+  border: 1px solid #c9c9c9;
+}
+.main .main-top-p {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: normal;
+  font-size: 40px;
+  color: #fdd793;
+  height: 80px;
+  border-bottom: 1px solid #fbb435;
+}
+.main .main-a {
+  display: block;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: normal;
+  font-size: 30px;
+  color: white;
+  width: 80%;
+  height: 120px;
+  background-color: #29bde0;
+  margin: 30px auto;
+  text-decoration: none;
+  /*去下划线*/
+}
+.main .main-content-p {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: normal;
+  font-size: 26px;
+  color: #9a9a9a;
+}
+.main .main-a-1 {
+  display: block;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: normal;
+  font-size: 30px;
+  color: white;
+  width: 80%;
+  height: 120px;
+  background-color: #29bde0;
+  margin: 30px auto;
+  text-decoration: none;
+  /*去下划线*/
+  position: relative;
+}
+.main .main-a-1 .main-triangle {
+  width: 0;
+  height: 0;
+  border-width: 34px;
+  border-style: solid;
+  border-color: transparent transparent transparent #fbb435;
+  position: absolute;
+  right: -84px;
+}
+.main .footer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.main .footer .footer-box {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: #c9c9c9;
+  margin: 30px 10px;
+  cursor: pointer;
+}
+.main .footer .footer-box:hover {
+  background-color: #29bde0;
+}
