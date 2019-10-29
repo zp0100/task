@@ -65,7 +65,7 @@ p {
 /*carousel样式*/
 .carousel-img {
     width: 100%;
-    height: 40vh;
+    height: 30vw;
 }
 
 .carousel-p-1 {
@@ -202,16 +202,15 @@ p {
 .main-4-img-2 {
     background: url("image.png") no-repeat;
     width: 100%;
+    height:50%;
     overflow: hidden;
     background-size: cover;
     max-height: 200px;
-    margin:2rem 0;
 
 }
 .main-4-box{
     background-color: white;
     max-height: 200px;
-    margin:2rem 0;
 }
 .main-4-box:hover {
     box-shadow: rgb(230 230 230) 0rem 0rem 2rem;
@@ -234,6 +233,7 @@ p {
     font-size: 1.4rem;
     border-bottom:1px solid white;
     flex-shrink:0;
+    cursor:pointer;
     }
 .footer-1-p:hover{
     border-bottom:1px solid rgb(38, 162, 111);
@@ -256,6 +256,12 @@ p {
     flex-shrink:0;
     border-bottom:1px solid rgb(38, 162, 111);
     margin:10px 0;
+    cursor:pointer;
+}
+.footer-2-p-0{
+    flex-shrink:0;
+    border-bottom:1px solid rgb(38, 162, 111);
+    margin:10px 0;
 }
 .footer-2-p-i{
     flex-shrink:0;
@@ -266,6 +272,7 @@ p {
     border-bottom:1px solid rgb(38, 162, 111);
     margin:10px 0;
     margin-left:5px;
+    cursor:pointer;
 }
 .footer-2-p:hover{
     border-bottom: 1px solid white;
@@ -276,6 +283,7 @@ p {
 
 .footer-2-img {
     width: 6rem;
+    cursor:pointer;
 }
 .footer-3 {
     color: white;

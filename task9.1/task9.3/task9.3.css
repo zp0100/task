@@ -211,6 +211,12 @@ html {
     flex-shrink:0;
     border-bottom:1px solid rgb(38, 162, 111);
     margin:10px 0;
+    cursor:pointer;
+}
+.footer-2-p-0{
+    flex-shrink:0;
+    border-bottom:1px solid rgb(38, 162, 111);
+    margin:10px 0;
 }
 .footer-2-p-i{
     flex-shrink:0;
@@ -221,6 +227,7 @@ html {
     border-bottom:1px solid rgb(38, 162, 111);
     margin:10px 0;
     margin-left:5px;
+    cursor:pointer;
 }
 .footer-2-p:hover{
     border-bottom: 1px solid white;
@@ -231,6 +238,7 @@ html {
 
 .footer-2-img {
     width: 6rem;
+    cursor:pointer;
 }
 .footer-3 {
     color: white;
