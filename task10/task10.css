@@ -1,7 +1,6 @@
 * {
     margin: 0;
     padding: 0;
-    border: 0;
 }
 html {
     font-size: 10px;
@@ -118,6 +117,7 @@ background: rgb(255,127,2)
 }
 .footer-2{
     background: rgb(29,122,217);
+    color: white;
     text-align:center;}
 .main-border{
     border:1px solid rgb(231,231,231);
@@ -133,6 +133,45 @@ background: rgb(255,127,2)
     border-right:1px solid rgb(231,231,231);
     border-bottom:1px solid rgb(231,231,231);
 }
+/*改变input样式*/
+
+input[type=radio]{
+    /*css中将原先的input[type=radio]的内容进行隐藏。*/
+	display: none;
+}
+.input-style{
+    /*捕捉绝对定位的边框,同时设置外边距*/
+    position: relative;
+    display: inline-block;
+    content: "";
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    border: 1px solid rgb(219, 219, 219);
+    margin-right: 6px;
+    vertical-align: middle;
+    margin-top:2px;
+  
+}
+input:checked+ .input-style{
+    /*在input单选框在选中的时候，原有before的单选框变为蓝色实心框*/
+    background:rgb(29,122,217);
+    border: 1px solid rgb(29,122,217);
+}
+input:checked+ .input-style::before{
+    /*添加label::after为白色圆，并将其定位到before的红色实心框中间。
+    从而达到重叠的效果，实现红色圆框+白色圆心的效果。*/
+    display: inline-block;
+    content: "";
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    position: absolute;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+}
+/*尾部*/
 footer{
     background:rgb(249,249,249)
 }
@@ -165,3 +204,5 @@ p:hover.footer-p{
        
     }
 }
+
+

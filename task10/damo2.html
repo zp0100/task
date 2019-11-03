@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>花草</title>
+    <style type="text/css">
+        input {
+            display: none;
+        }
+
+        label {
+            position: relative;
+            display: inline-block;
+            width: 20px;
+            height: 20px;
+            border: 1px solid blue;
+            border-radius: 50%;
+        }
+
+        input:checked+label {
+            background-color: rgb(239, 66, 56);
+            border: 1px solid red;
+        }
+
+        input:checked+label::before {
+            display: inline-block;
+            content: "";
+            width: 6px;
+            height: 6px;
+            border-radius: 50%;
+            position: absolute;
+            left: 6px;
+            bottom: 6px;
+            background-color: white;
+        }
+    </style>
+</head>
+
+<body>
+   
+        <input type="radio" id="aaa5"name="aaa"><label for="aaa5"></label>草
+        <input type="radio" id="aaa6"name="aaa"><label for="aaa6"></label>树
+        <input type="radio" id="aaa4"name="aaa"><label for="aaa4"></label>花
+    
+    <form>
+        <input type="radio" id="aaa1"name="aaa"><label for="aaa1"></label>花
+        <input type="radio" id="aaa2"name="aaa"><label for="aaa2"></label>草
+        <input type="radio" id="aaa3"name="aaa"><label for="aaa3"></label>树
+    </form>
+   
+    <form>
+
+            <input type="radio" id="aaa7"name="aaa"><label for="aaa7"></label>花
+            <input type="radio" id="aaa8"name="aaa"><label for="aaa8"></label>草
+            <input type="radio" id="aaa9"name="aaa"><label for="aaa9"></label>树
+    </form>
+    
+        
+</body>
+
+</html>
+
