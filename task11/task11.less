@@ -1,0 +1,103 @@
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+
+//颜色
+@c1: rgb(95, 192, 205);
+@c2: rgb(239, 240, 244);
+@s1: 15px;
+
+//文本样式
+.text(@s: 20px, @c: white, ) {
+    font-size: @s;
+    color: @c;
+}
+
+//弹性布局-居中
+.flex(@j: center, @a: center) {
+    display: flex;
+    align-items: @a;
+    justify-content: @j;
+}
+
+body {
+    background: @c2;
+}
+
+.header {
+    .flex(@j: space-between, );
+    background: @c1;
+
+    .header-p {
+        .text;
+        padding: 10px 0;
+    }
+
+    .header-button {
+        .text(@s: @s1, );
+        background: @c1;
+        margin: 0 10px;
+        cursor: pointer;
+    }
+}
+
+.main {
+    margin-top: 10px;
+
+    .main-box {
+        display: flex;
+        align-items: center;
+        margin-bottom: 10px;
+        background: white;
+        padding: 10px 0;
+
+        .input-ioc {
+            height: 24px;
+            width: 15px;
+            padding: 0 10px;
+            border-right: 1px solid rgb(239, 240, 244);
+        }
+
+        .input-box {
+            .text(@s: 15px, @c: black, );
+            margin-left: 15px;
+            outline: none;
+            /*去除输入框的默认样式*/
+            flex-grow: 1;
+        }
+
+        input::placeholder {
+            color: @c2;
+        }
+    }
+
+}
+
+.footer {
+    .flex;
+
+    background: @c1;
+
+    .footer-button {
+        .text;
+        width: 100vw;
+        padding: 15px 0;
+        background: @c1;
+        cursor: pointer;
+    }
+}
+
+.forget {
+    display: flex;
+    flex-direction: row-reverse;
+
+    .forget-button {
+        .text(@s: 15px, @c: @c1, );
+        background: @c2;
+        margin: 10px 10px 0 0;
+        cursor: pointer;
+
+    }
+}
