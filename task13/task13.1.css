@@ -3,6 +3,46 @@
   padding: 0;
   border: 0;
 }
+body {
+  position: relative;
+  overflow-x: hidden;
+}
+/*侧边栏*/
+input {
+  display: none;
+}
+.n-1 {
+  position: fixed;
+  top: 0;
+  left: -300px;
+  height: 100vh;
+  width: 300px;
+  transition: left 5s;
+  font-weight: normal;
+  font-size: 20px;
+  color: #29bde0;
+}
+.n-1 .li {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 5px 10px;
+  border-bottom: 1px solid #9a9a9a;
+}
+input:checked ~ .n-1 {
+  left: 0;
+  transition: left 5s;
+}
+input:checked ~ .box123 {
+  transform: translateX(300px);
+  transition: transform 5s;
+}
+.box123 {
+  width: 100%;
+  transform: translateX(0px);
+  transition: transform 5s;
+  background-color: #f0f0f0;
+}
 /*头部*/
 .header {
   height: 80px;
@@ -12,9 +52,12 @@
   justify-content: flex-start;
 }
 .header .header-botton {
+  /*按钮样式*/
   margin-left: 40px;
+  cursor: pointer;
 }
 .header .header-botton .header-span {
+  /*三条线样式*/
   display: block;
   background: white;
   width: 40px;
