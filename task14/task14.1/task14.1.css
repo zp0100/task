@@ -527,6 +527,7 @@
   color: #a1a1a1;
   flex-shrink: 0;
   border-bottom: 1px solid white;
+  cursor: pointer;
 }
 .main-5 .main-5-box .main-5-p:hover {
   border-bottom: 1px solid #34b47f;
