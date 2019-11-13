@@ -48,17 +48,18 @@ footer {
     .footer-p {
         .t-style(@s: 10px, @c: white);
         border-bottom: 1px solid @c-1;
-        margin-bottom:5px;
+        margin-bottom:10px;
     }
-
+    .footer-p-1 {
+        .footer-p;
+        margin-left:3px;
+        margin-right: 3px;
+    }
     .footer-box {
         .row;
         .col;
 
-        .footer-p-1 {
-            .footer-p;
-            margin: 0 3px;
-        }
+       
 
         .footer-l-box {
             display: flex;
@@ -69,11 +70,7 @@ footer {
             .footer-l-b-box {
                 display: flex;
 
-                .footer-p-1 {
-                    .footer-p;
-                    margin: 0 3px;
-                }
-
+            
                 .footer-p {
                     cursor: pointer;
                 }
