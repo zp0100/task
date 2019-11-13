@@ -101,18 +101,26 @@ input {
     display: none;
   }
 }
+/*垂直导航栏*/
 @media screen and (max-width: 768px) {
-  .ul-box-2 {
+  .transition {
+    position: relative;
+    overflow: hidden;
+    height: 0px;
+    transition: height 2s;
+  }
+  .transition .ul-box-2 {
+    position: absolute;
     display: flex;
     align-items: center;
     justify-content: center;
-    display: none;
+    width: 100%;
     flex-direction: column;
     list-style-type: none;
     /*去除li前面的圆点样式*/
     background: #34b47f;
   }
-  .ul-box-2 .box-R-2 {
+  .transition .ul-box-2 .box-R-2 {
     display: block;
     text-decoration: none;
     font-weight: normal;
@@ -124,10 +132,10 @@ input {
     padding: 4px 0;
     border-bottom: 1px solid #34b47f;
   }
-  .ul-box-2 .box-R-2:hover {
+  .transition .ul-box-2 .box-R-2:hover {
     border-bottom: 1px solid white;
   }
-  input:checked ~ .ul-box-2 {
-    display: flex;
+  input:checked ~ .transition {
+    height: 260px;
   }
 }

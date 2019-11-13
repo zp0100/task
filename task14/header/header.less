@@ -127,11 +127,17 @@ input {
     }
    
 }
-
+/*垂直导航栏*/
 @media screen and (max-width: 768px) {
+    .transition{
+        position: relative;
+       overflow: hidden;
+       height: 0px;
+       transition: height 2s;
     .ul-box-2 {
-        .flex;
-        display: none;
+        position: absolute;
+        .flex;       
+       width: 100%;
         flex-direction: column;
         list-style-type: none;
         /*去除li前面的圆点样式*/
@@ -148,8 +154,8 @@ input {
             border-bottom: 1px solid white;
         }
     }
-
-    input:checked~.ul-box-2 {
-        display: flex;
+}
+    input:checked ~.transition{
+        height: 260px;
     }
 }
