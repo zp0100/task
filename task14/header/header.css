@@ -1,0 +1,133 @@
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+/*页眉*/
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.header .header-p {
+  margin-left: 10vw;
+  font-weight: normal;
+  font-size: 14px;
+  color: #34b47f;
+}
+.header .header-img-box {
+  margin-right: 10vw;
+}
+.header .header-img-box .header-img {
+  padding: 10px 0;
+  margin-left: 20px;
+  cursor: pointer;
+}
+input {
+  display: none;
+}
+/*导航*/
+.ul-box {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  list-style-type: none;
+  /*去除li前面的圆点样式*/
+  background: #34b47f;
+  /*小于768px隐藏*/
+  /*大于768px隐藏*/
+  /*按钮样式*/
+}
+.ul-box .li-box-L {
+  margin-left: 10vw;
+}
+.ul-box .li-box-L .li-a {
+  display: block;
+  text-decoration: none;
+}
+.ul-box .li-box-L .li-a .box-L-1 {
+  font-weight: normal;
+  font-size: 30px;
+  color: white;
+}
+.ul-box .li-box-L .li-a .box-L-2 {
+  font-weight: normal;
+  font-size: 4px;
+  color: white;
+}
+.ul-box .li-box-R {
+  display: flex;
+  margin-right: 10vw;
+}
+@media screen and (max-width: 768px) {
+  .ul-box .li-box-R {
+    display: none;
+  }
+}
+@media screen and (min-width: 768px) {
+  .ul-box .button {
+    display: none;
+  }
+}
+.ul-box .button {
+  margin-right: 10vw;
+  border: 1px solid white;
+  padding: 0 5px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+.ul-box .button .button-span {
+  display: block;
+  border-bottom: 1px solid white;
+  width: 25px;
+  margin: 7px 0;
+}
+/*水平导航栏字体样式*/
+.box-R-1 {
+  display: block;
+  text-decoration: none;
+  font-weight: normal;
+  font-size: 18px;
+  color: white;
+  margin-left: 10px;
+  padding: 20px 0;
+  border-bottom: 1px solid #34b47f;
+}
+.box-R-1:hover {
+  border-bottom: 1px solid white;
+}
+@media screen and (min-width: 768px) {
+  .ul-box-2 {
+    display: none;
+  }
+}
+@media screen and (max-width: 768px) {
+  .ul-box-2 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    display: none;
+    flex-direction: column;
+    list-style-type: none;
+    /*去除li前面的圆点样式*/
+    background: #34b47f;
+  }
+  .ul-box-2 .box-R-2 {
+    display: block;
+    text-decoration: none;
+    font-weight: normal;
+    font-size: 18px;
+    color: white;
+    margin-left: 10px;
+    padding: 20px 0;
+    margin: 0;
+    padding: 4px 0;
+    border-bottom: 1px solid #34b47f;
+  }
+  .ul-box-2 .box-R-2:hover {
+    border-bottom: 1px solid white;
+  }
+  input:checked ~ .ul-box-2 {
+    display: flex;
+  }
+}

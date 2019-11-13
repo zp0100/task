@@ -1,0 +1,117 @@
+@import "../header/header.css";
+@import "../footer/footer.css";
+@import "../header/header.less";
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+.img-container {
+  display: block;
+  width: 100%;
+  height: 30vw;
+}
+.main-h {
+  padding: 20px 10vw;
+  font-weight: normal;
+  font-size: 15px;
+  color: black;
+}
+.main-box {
+  width: 80vw;
+  margin: 20px 10vw;
+  display: flex;
+  flex-wrap: wrap;
+}
+@media screen and (min-width: 768px) {
+  .main-box .main-box-l {
+    width: 20vw;
+    padding: 0 15px;
+    box-sizing: border-box;
+  }
+}
+@media screen and (max-width: 768px) {
+  .main-box .main-box-l {
+    width: 80vw;
+    padding: 0 15px;
+    box-sizing: border-box;
+  }
+}
+@media screen and (min-width: 768px) {
+  .main-box .main-box-r {
+    width: 60vw;
+    padding: 0 15px;
+    box-sizing: border-box;
+  }
+}
+@media screen and (max-width: 768px) {
+  .main-box .main-box-r {
+    width: 80vw;
+    padding: 0 15px;
+    box-sizing: border-box;
+  }
+}
+.main-box .main-l {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  border: 1px solid #E1E1E1;
+}
+.main-box .main-l .main-l-h {
+  font-weight: bold;
+  font-size: 18px;
+  color: black;
+  padding: 10px 0;
+  border-bottom: 1px solid #E1E1E1;
+  width: 100%;
+  text-align: center;
+}
+.main-box .main-l .main-l-flex {
+  display: flex;
+  padding: 10px 0;
+  align-items: center;
+  width: 80px;
+}
+.main-box .main-l .main-l-flex .main-l-box {
+  width: 10px;
+  height: 10px;
+  border: 2px solid #FF650E;
+  border-radius: 50%;
+  margin-right: 10px;
+  flex-shrink: 0;
+}
+.main-box .main-l .main-l-flex .main-l-p {
+  font-weight: normal;
+  font-size: 10px;
+  color: #34b47f;
+  flex-shrink: 0;
+}
+.main-box .main-l .main-l-flex:hover .main-l-box {
+  background-color: #FF650E;
+}
+.main-box .main-r {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  border: 1px solid #E1E1E1;
+}
+.main-box .main-r .main-r-float {
+  border-bottom: 1px solid #E1E1E1;
+  align-items: flex-start;
+  padding: 20px;
+}
+.main-box .main-r .main-r-float .main-r-img {
+  float: left;
+  width: 200px;
+}
+.main-box .main-r .main-r-float .main-r-p {
+  padding: 0;
+}
+.main-box .main-r .main-r-p {
+  font-weight: normal;
+  font-size: 15px;
+  color: #a1a1a1;
+  padding: 20px;
+}

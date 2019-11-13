@@ -1,0 +1,138 @@
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+
+@c-1: rgb(52, 180, 127);
+
+.t-style(@w: normal, @s: 18px, @c: black, ) {
+    font-weight: @w;
+    font-size: @s;
+    color: @c;
+}
+
+/*就是个具有弹性元素的盒子,平分3分,且不可继承*/
+.col {
+    @media screen and (min-width: 768px) {
+        .footer-col-box {
+            display: flex;
+            width: 25vw;
+            padding: 0 15px;
+            box-sizing: border-box;
+            flex-grow: 1;
+        }
+    }
+
+    @media screen and (max-width: 768px) {
+        .footer-col-box {
+            width: 80vw;
+            padding: 0 15px;
+            box-sizing: border-box;
+        }
+    }
+}
+
+/*盒子成一行排列,可以换行*/
+.row {
+    width: 80vw;
+    margin: 0 10vw;
+    padding: 20px 0;
+    display: flex;
+    flex-wrap: wrap
+}
+
+footer {
+    background: @c-1;
+
+    .footer-p {
+        .t-style(@s: 10px, @c: white);
+        border-bottom: 1px solid @c-1;
+    }
+
+    .footer-box {
+        .row;
+        .col;
+
+        .footer-p-1 {
+            .footer-p;
+            margin: 0 3px;
+        }
+
+        .footer-l-box {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            align-items: flex-start;
+
+            .footer-l-b-box {
+                display: flex;
+
+                .footer-p-1 {
+                    .footer-p;
+                    margin: 0 3px;
+                }
+
+                .footer-p {
+                    cursor: pointer;
+                }
+
+                .footer-p:hover {
+                    border-bottom: 1px solid white;
+                }
+            }
+        }
+
+        .footer-c-box {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+
+            .f-flex {
+                display: flex;
+
+                .footer-p {
+                    cursor: pointer;
+                }
+
+                .footer-p-1 {
+                    cursor: pointer;
+                }
+
+                .footer-p:hover {
+                    border-bottom: 1px solid white;
+                }
+
+                .footer-p-1:hover {
+                    border-bottom: 1px solid white;
+                }
+            }
+        }
+
+        .footer-r-box {
+            display: flex;
+            width: 100%;
+            flex-direction: column;
+            align-items: flex-end;
+
+            .footer-r-img {
+                width: 72px;
+                cursor: pointer;
+                margin-top: 20px;
+            }
+
+        }
+        @media screen and (max-width: 768px){
+            .footer-r-box{
+              align-items: flex-start;     
+            }
+        }  
+    }
+
+}
+.footer-2{
+    color: white;
+    background-color:@c-1;
+    text-align: center;
+    border-top: 1px solid rgb(50, 192, 134)
+}

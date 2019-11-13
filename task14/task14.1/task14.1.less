@@ -1,0 +1,300 @@
+@import"../header/header.css";
+@import"../footer/footer.css";
+@import"../header/header.less";
+
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+
+.flex(@j: center, @a: center) {
+    display: flex;
+    align-items: @a;
+    justify-content: @j;
+}
+
+//常用背景色，字体色
+@c-1: rgb(52, 180, 127);
+@c-2: white;
+@c-3: rgb(161, 161, 161);
+
+.t-style(@w: normal, @s: 18px, @c: black, ) {
+    font-weight: @w;
+    font-size: @s;
+    color: @c;
+}
+
+.float {
+    @media screen and (min-width: 992px) {
+        .main-box {
+            
+            width: 20vw;
+            padding: 0 15px;
+            box-sizing: border-box;
+        }
+    }
+
+    @media screen and (max-width: 992px) {
+        .main-box {
+           
+            width: 40vw;
+            padding: 0 15px;
+            box-sizing: border-box;
+        }
+    }
+
+    @media screen and (max-width: 576px) {
+        .main-box {
+           
+            width: 80vw;
+            padding: 0 15px;
+            box-sizing: border-box;
+        }
+    }
+}
+.float-2{
+    @media screen and (min-width: 992px) {
+        .main-box {
+            
+            width: 8vw;
+            padding: 0 15px;
+            box-sizing: border-box;
+        }
+    }
+
+    @media screen and (max-width: 992px) {
+        .main-box {
+           
+            width: 16vw;
+            padding: 0 15px;
+            box-sizing: border-box;
+        }
+    }
+
+    @media screen and (max-width: 576px) {
+        .main-box {
+           
+            width: 40vw;
+            padding: 0 15px;
+            box-sizing: border-box;
+        }
+    }
+}
+.float-3{
+    @media screen and (min-width: 992px) {
+        .main-box {
+           
+            width: 16vw;
+            padding: 0 15px;
+            box-sizing: border-box;
+        }
+    }
+
+    @media screen and (max-width: 992px) {
+        .main-box {
+           
+            width: 40vw;
+            padding: 0 15px;
+            box-sizing: border-box;
+        }
+    }
+
+    @media screen and (max-width: 576px) {
+        .main-box {
+           
+            width: 80vw;
+            padding: 0 15px;
+            box-sizing: border-box;
+        }
+    }
+}
+.row-col{
+    width: 80vw;
+    margin: 20px 10vw;
+    
+    .float;
+    display: flex;   
+    flex-wrap: wrap;
+}
+.row-col-2{
+    .row-col;
+    .float-2;
+}
+.row-col-3{
+    .row-col;
+    .float-3;
+}
+.main-1 {
+    .row-col;
+    
+    .main-1-box {
+        .flex;
+        padding:10px 0;
+        /*以上统一*/
+        flex-direction: column;
+           
+        .main-1-ioc {
+            display: block;
+            height: 30px;
+        }
+
+        .main-1-h {
+            margin: 10px 0;
+        }
+
+        .main-1-p {
+            .t-style(@c: @c-3; @s: 10px; );
+        }
+
+        
+    }
+    .main-1-another{
+        .flex(@a:flex-start;);
+        flex-direction: column;
+        .main-1-another-1 {
+            display: flex;
+            margin:10px 0;
+        }
+        .main-1-p {
+            .t-style(@c: @c-3; @s: 10px; );
+        }
+
+    }
+    @media screen and (max-width: 992px){
+        .main-1-another{
+            .flex;
+            flex-direction: column;
+        }
+    }
+}
+.main-h4{
+    .flex;
+    padding:40px 0;
+}
+.main-2{
+   .row-col;
+    .main-2-box{
+        .flex(@j:space-between;);
+        padding:10px 0;
+        .digit {
+            width: 3rem;
+            height: 3rem;
+            line-height: 3rem;
+            text-align: center;
+            box-shadow: rgb(230 230 230) 0rem 0.2rem 0.4rem 0.1rem;
+            border-radius: 50%;
+            margin-right: 1rem;
+            flex-shrink: 0;
+        }
+        .main-2-p{
+            .t-style(@s:10px;);
+        }
+        @media screen and (max-width: 992px) {
+            .main-2-ioc{
+             display: none;
+        }
+        }  
+    }
+    @media screen and (max-width: 992px){
+        .main-2-box{
+            justify-content:flex-start;
+        }
+    }
+}
+.main-3{
+   .row-col;
+   .main-3-box{
+       margin:10px;
+       padding:0 10px;
+       .flex;
+       flex-direction:column;
+       box-shadow: rgb(230 230 230) 0 2px 4px 1px;
+       /*阴影*/
+       .main-3-ioc{
+        /*图标为圆形*/
+    width: 5rem;
+    height: 5rem;
+    border-radius: 50%;
+    margin:10px 0;
+       }
+     .main-3-p{
+         padding:20px 0;
+         .t-style(@s:10px;@c:@c-3;);
+     }  
+   }
+}
+.main-4{
+    .row-col-3;
+    .main-4-box{
+        
+    z-index:0;    
+        .flex;
+        height: 160px;
+        width: 100%;
+        background: white;
+        .main-4-img{
+            max-height: 100%;
+            max-width: 100%;
+            overflow: hidden;
+            flex-shrink:0;
+        }
+    }
+    .main-box:hover {
+        box-shadow: rgb(230 230 230) 0 0 20px;
+        z-index: 1;
+    }
+}
+.main-5{
+    .row-col-2;
+    .main-5-box{
+      display:flex;
+        .main-5-p{
+            .t-style(@s:12px;@c:@c-3;);
+            flex-shrink: 0;
+        border-bottom: 1px solid white;   
+        }
+        .main-5-p:hover{
+            border-bottom:1px solid @c-1;
+        }  
+    }
+}
+/*轮播*/
+.box{
+    overflow: hidden;
+    .box-1{
+        position: relative;
+    width: 300vw;
+    overflow: hidden;
+    animation: carousel linear 5s infinite 0s normal;
+
+        .box-img{            
+            display:block;
+    width: 100vw;
+    height: 30vw;
+    float: left;
+
+        }
+        @keyframes carousel {
+            0% {
+                left: 0;
+            }
+            20% {
+                left: -0vw;
+            }
+            40% {
+                left: -100vw;
+            }
+            60% {
+                left: -100vw;
+            }
+            80% {
+                left: -200vw;
+            }
+            100% {
+                left: -200vw;
+            }
+        }
+        
+    }
+}
