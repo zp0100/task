@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>js-1</title>
+    <link rel="stylesheet" type="text/css" href="js-1.css">
+</head>
+
+<body>
+    <div class="box">
+        <div class="box1"></div>
+        <div class="box1"></div>
+        <div class="box1"></div>
+        <div class="box1"></div>
+        <div class="box1"></div>
+        <div class="box1"></div>
+        <div class="box1"></div>
+        <div class="box1"></div>
+        <div class="box1"></div>
+    </div>
+    <script>
+
+        function numbox(){
+        var num = [0, 1, 2, 3, 4, 5, 6, 7, 8]; //声明一个叫做num的数组,数字从0到8,数组必须从0开始,声明数字不需要引号
+        var newnum = []; //声明一个新的空的数组,用于接收判断语句后的3个随机数
+        var a = 3; //一个阀值,循环语句循环一次,随机取一个数字,任务要求3个,所以循环三次,名称任意,无含义,就是为了调用
+        for (var b = 0; b < a; b++) //括号内就是循环机制,一定条件下,{}中的代码运行几次,随意命名无含义,
+        //起始前b=0,b<a循环条件,b++代码执行后,意思为加一,值传入语句一,b=1再次判定,是否执行{}中的代码,直到b>=a,不再执行
+        {
+            var ran = Math.round(Math.random() * (blocks.length - 1));//这个用四舍五入round()取整,就需要blocks.length - 1,也就是乘以8,
+            //最大整数为8,取整从0~8中选取
+            //第二步,保证数组输出的值不重复
+            newnum.push(num[ran]);//选取随机值对应的num数组中的数值,抓取到newnum空数组中
+            num.splice(ran, 1);//splice删除数组num的数值,括号中两个两个值,前面是索引值,后面是删除的个数,包含自身,从0开始计算
+            //ex:随机的是ran随机的是2,索引值也是2,就是从num第三个值(2)开始删除,后面的数值1是删除一个,如果是2,就删除第三(2)和第四(3)个数值
+        }
+        return newnum;//输出的值,返回到newnum数组中,一共3次,数组中就包含三个随机数
+        }
+
+            
+        document.getElementsByClassName('box1')[newblock[0]]//输出
+        document.getElementsByClassName('box1')[newblock[1]]
+        document.getElementsByClassName('box1')[newblock[2]]
+
+
+
+        function num() { //声明一个函数num
+            var newnum = Math.floor(Math.random() * 9) //Math.random()是0~1之间的随机小数,*9乘以9,Math.random()出来的小数,
+            //就相当于0~9之间的随机数,因为数组从零开始,0~8,就是9个数字,所以根据实际需求,需要用floor()向下舍入取整,而不是round()
+            //四舍五入,有一定几率变成9,超出数组上限,使函数失效,要保证最大整数不超过数组上限,(这里是8)
+            document.getElementsByClassName('box1')[newnum] //DOM通过类名绑定,在绑定("box1")的时候,相同类名自动默认为数组,哪怕只有一个,
+            //调用也要加上[0]数组名;[newnum]输出的就是0~8之间的随机整数,包含0和8  
+            console.log(document.getElementsByClassName('box1')[newnum]) //console.log,写入浏览器控制台,调试用
+        }
+        num() //直接输出随机绑定3个九宫格的格子
+        num()
+        num()
+        var x = num() //分别为随机函数声明变量x,y,z
+        var y = num()
+        var z = num()
+        if (x != y && x != z && y != z) //意义为x,y,z相互不等于
+        {
+
+        } else if (x == y) { //三次判定,相等就重新执行函数代码,直到相互不等于,输出
+
+        } else if (x == z) {
+
+        } else if (y == z) {
+
+        }
+    </script>
+</body>
+
+</html>

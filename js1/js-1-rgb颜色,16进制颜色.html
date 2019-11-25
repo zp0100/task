@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="js-1.css">
+    <title>js-1</title>
+</head>
+
+<body>
+    <div class="box">
+        <div class="box1"></div>
+        <div class="box1"></div>
+        <div class="box1"></div>
+        <div class="box1"></div>
+        <div class="box1"></div>
+        <div class="box1"></div>
+        <div class="box1"></div>
+        <div class="box1"></div>
+        <div class="box1"></div>
+        <button class="buttom">开始闪</button>
+        <button class="buttom">结束闪</button>
+    </div>
+    <script>
+        function numbox() {
+            var num = [0, 1, 2, 3, 4, 5, 6, 7, 8]; //声明一个叫做num的数组,数字从0到8,数组必须从0开始,声明数字不需要引号
+            var newnum = []; //声明一个新的空的数组,用于接收判断语句后的3个随机数
+            var a = 3; //一个阀值,循环语句循环一次,随机取一个数字,任务要求3个,所以循环三次,名称任意,无含义,就是为了调用
+            for (var b = 0; b < a; b++) //括号内就是循环机制,一定条件下,{}中的代码运行几次,随意命名无含义,
+            //起始前b=0,b<a循环条件,b++代码执行后,意思为加一,值传入语句一,b=1再次判定,是否执行{}中的代码,直到b>=a,不再执行
+            {
+                var ran = Math.round(Math.random() * (num.length - 1)); //这个用四舍五入round()取整,就需要blocks.length - 1,也就是乘以8,
+                //最大整数为8,取整从0~8中选取
+                //第二步,保证数组输出的值不重复
+                newnum.push(num[ran]); //选取随机值对应的num数组中的数值,抓取到newnum空数组中
+                num.splice(ran, 1); //splice删除数组num的数值,括号中两个两个值,前面是索引值,后面是删除的个数,包含自身,从0开始计算
+                //ex:随机的是ran随机的是2,索引值也是2,就是从num第三个值(2)开始删除,后面的数值1是删除一个,如果是2,就删除第三(2)和第四(3)个数值
+            }
+
+            return newnum; //根据任务需求返回随机数组newnum,把newnum的值调到外部,为函数赋值
+        }
+        // //RGB随机颜色
+        // function col() {
+        //     var r = Math.floor(Math.random() * 256); //含义为0~256中随机选一个数字 
+        //     var g = Math.floor(Math.random() * 256); //分别为r,g,b随机选择数字 
+        //     var b = Math.floor(Math.random() * 256); //然后把它们组合在一起 
+        //     var color = "("+r + "," + g + "," + b+")"; //引号""内代表字符串,加号(+)连接字符串
+        //     return color;
+        // }
+
+
+
+        // cl0.style.background ="rgb"+col();
+        // cl1.style.background ="rgb"+col();
+        // cl2.style.background ="rgb"+col();
+        //十六进制颜色
+
+
+
+
+        function col() { //随机生成十六进制颜色
+            var ne = [] //16进制的数字
+            for (var a = 0; a < 6; a++) {
+
+                var num = Math.floor(Math.random() * 16).toString(16); //生成0~16内的随机数;高于9由toString(16),转成16进制的字母
+                // ne.push(num);
+                ne += num; //自加,相当于ne=ne+num的简写
+
+            }
+            // var coo = "#" + ne[0] + ne[1] + ne[2] + ne[3] + ne[4] + ne[5];
+            var coo = "#" + ne; ////#加上进制的数字
+
+            return coo;
+
+        }
+        //封装改变绑定九宫颜色这一过程
+        function jishi() {
+            //为颜色声明变量
+
+            var color0 = col()
+            var color1 = col()
+            var color2 = col()
+            //防止颜色重复
+            if (color1 === color2 || color1 === color3 || color2 === color3) {
+                //判断语句,意思是如果有相同的颜色,就重新声明函数,覆盖原本颜色,直到没有重复的颜色   
+                var color1 = col();
+                var color2 = col();
+                var color3 = col();
+                //要写在,改变九宫格颜色之前,不然,九宫格出现重复颜色也无法改变
+            }
+            //绑定九宫格的序号
+            var bb = numbox();
+            var cl0 = document.getElementsByClassName('box1')[bb[0]];
+            var cl1 = document.getElementsByClassName('box1')[bb[1]];
+            var cl2 = document.getElementsByClassName('box1')[bb[2]];
+            //给绑定的九宫格改变颜色
+            cl0.style.backgroundColor = color0;
+            cl1.style.backgroundColor = color1;
+            cl2.style.backgroundColor = color2;
+            setTimeout(function () {
+                cl0.style.backgroundColor = "burlywood";
+                cl1.style.backgroundColor = "burlywood";
+                cl2.style.backgroundColor = "burlywood";
+            }, 995);
+        }
+
+        setInterval(jishi, 1000);
+    </script>
+</body>
+
+</html>
